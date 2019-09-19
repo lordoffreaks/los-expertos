@@ -15,18 +15,18 @@
   "license": "ISC",
   "dependencies": {
     "convict": "^5.1.0",
-    "twit": "^2.2.11",
-    "@types/convict": "^4.2.1",
-    "@types/node": "^12.7.5",
-    "@types/twit": "^2.2.22",
-    "typescript": "^3.6.3"
+    "twit": "^2.2.11"
   },
   "devDependencies": {
+    "@types/convict": "^4.2.1",
     "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.5",
+    "@types/twit": "^2.2.22",
     "jest": "^24.9.0",
     "ts-jest": "^24.1.0",
     "ts-loader": "^6.1.0",
     "ts-node": "^8.4.1",
+    "typescript": "^3.6.3",
     "webpack": "^4.40.2",
     "webpack-cli": "^3.3.9"
   }
