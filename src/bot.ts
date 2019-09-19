@@ -10,6 +10,9 @@ export const createBot = (config: BotConfig, logger: any): Bot => {
   const T = new Twit(authConfig)
 
   const onTweet = async (tweet: Twit.Twitter.Status) => {
+
+    logger.info('Received tweet', tweet.id)
+
     const name = tweet.user.screen_name
     // What is the text?
     // const txt = tweet.text;
