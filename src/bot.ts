@@ -7,6 +7,8 @@ export interface Bot {
 
 export const createBot = (config: BotConfig, logger: any): Bot => {
   const authConfig = config.get('twitter')
+  config.logCurrentConfig()
+  logger.info('authConfig', authConfig)
   const T = new Twit(authConfig)
 
   const onTweet = async (tweet: Twit.Twitter.Status) => {
@@ -20,7 +22,11 @@ export const createBot = (config: BotConfig, logger: any): Bot => {
     // const txt = txt.replace(/@myTwitterHandle/g, "");
 
     // Start a reply back to the sender
-    const reply = 'You mentioned me! @' + name + ' ' + 'You are super cool! But not as cool as "Los Expertos"'
+    const reply =
+      'You mentioned me! @' +
+      name +
+      ' ' +
+      'You are super cool! But not as cool as "Los Expertos"'
     const params = {
       status: reply,
       in_reply_to_status_id: nameID
