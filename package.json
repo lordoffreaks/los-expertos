@@ -2,11 +2,12 @@
   "name": "the-experts-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "main.js",
   "scripts": {
     "dev": "source .env.sh && TS_NODE_PROJECT=./tsconfig.json ts-node ./src/index.ts",
-    "build": "tsc",
-    "start": "node dist/src/index.js",
+    "prebuild": "rm -rf ./dist",
+    "build": "webpack --config webpack.config.js",
+    "start": "node dist/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -24,6 +25,9 @@
     "@types/jest": "^24.0.18",
     "jest": "^24.9.0",
     "ts-jest": "^24.1.0",
-    "ts-node": "^8.4.1"
+    "ts-loader": "^6.1.0",
+    "ts-node": "^8.4.1",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9"
   }
 }
