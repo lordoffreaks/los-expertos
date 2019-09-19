@@ -7,8 +7,6 @@ export interface Bot {
 
 export const createBot = (config: BotConfig, logger: any): Bot => {
   const authConfig = config.get('twitter')
-  config.logCurrentConfig()
-  logger.info('authConfig', authConfig)
   const T = new Twit(authConfig)
 
   const onTweet = async (tweet: Twit.Twitter.Status) => {
