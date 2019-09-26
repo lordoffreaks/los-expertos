@@ -26,5 +26,9 @@ export const createLogger = (config: BotConfig) => {
     ]
   })
 
+  if (extraTransports.length > 0) {
+    logger.info('Timber transport added!')
+  }
+
   return logger
 }
