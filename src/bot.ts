@@ -51,7 +51,7 @@ export const createBot = (
 
     try {
       await T.post('statuses/update', params)
-      console.log('Tweeted: ' + params.status)
+      logger.info('Tweeted: ' + params.status)
     } catch (err) {
       logger.error(err)
     }

@@ -5,15 +5,16 @@ export interface BotConfig extends convict.Config<ConfigSchema> {
 }
 
 export interface ConfigSchema {
-  nodeEnv: string
-  env: string
-  port: number
   logLevel: string
   twitter: {
     consumer_key: string
     consumer_secret: string
     access_token: string
     access_token_secret: string
+  }
+  timber: {
+    api_key: string
+    source_id: string
   }
   webpack: { output: { path: string } }
 }
@@ -25,25 +26,6 @@ export default config
 
 function getConfig(): BotConfig {
   return convict({
-    nodeEnv: {
-      doc:
-        'Running in an environment, or on a developer machine? Mainly used to decide log structure etc',
-      format: ['production', 'dev'],
-      env: 'NODE_ENV',
-      default: 'production'
-    },
-    env: {
-      doc: 'The deployment environment',
-      format: ['live', 'local'],
-      env: 'ENV_NAME',
-      default: 'local'
-    },
-    port: {
-      doc: 'Port for starting the app on.',
-      format: 'port',
-      env: 'PORT',
-      default: 8000
-    },
     logLevel: {
       doc: 'Log level to start logging at.',
       format: ['debug', 'info', 'warn', 'error'],
@@ -76,6 +58,22 @@ function getConfig(): BotConfig {
         doc: 'The access token secret',
         format: String,
         env: 'APP_ACCESS_TOKEN_SECRET',
+        default: '',
+        sensitive: true
+      }
+    },
+    timber: {
+      api_key: {
+        doc: 'The api key',
+        format: String,
+        env: 'TIMBER_API_KEY',
+        default: '',
+        sensitive: true
+      },
+      source_id: {
+        doc: 'The source id',
+        format: String,
+        env: 'TIMBER_SOURCE_ID',
         default: '',
         sensitive: true
       }
