@@ -10,10 +10,15 @@ export interface Bot {
   run: () => Promise<void>
 }
 
-const replyFormatter = (tweet: Twit.Twitter.Status, result: SearchResult) => {
-  const reply = `Hola @${tweet.user.screen_name}! "Los Expertos" hoy dicen:\r\n ${result.title} en ${result.url}`
+export const replyFormatter = (
+  tweet: Twit.Twitter.Status,
+  result: SearchResult
+) => {
+  return `Hola @${tweet.user.screen_name}! "Los Expertos" hoy dicen:\r\n ${result.title} en ${result.url}`
+}
 
-  return reply
+export const getRandomResult = (results: Array<SearchResult>) => {
+  return results[Math.floor(Math.random() * results.length)]
 }
 
 export const createBot = (
@@ -33,7 +38,7 @@ export const createBot = (
     // Get rid of the @ mention
     // const txt = txt.replace(/@myTwitterHandle/g, "");
 
-    const result = results[Math.floor(Math.random() * results.length)]
+    const result = getRandomResult(results)
 
     // Start a reply back to the sender
     const reply = replyFormatter(tweet, result)
