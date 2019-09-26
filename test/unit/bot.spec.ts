@@ -21,7 +21,7 @@ describe('The bot', () => {
         user: { screen_name: 'Alex' }
       } as Twit.Twitter.Status
       const result = { url: 'http://www.example.com', title: 'One Title' }
-      expect(replyFormatter(tweet, result)).toEqual('Hola @Alex! "Los Expertos" hoy dicen:\r\n One Title en http://www.example.com')
+      expect(replyFormatter(tweet, result)).toEqual('Hola @Alex! "Los Expertos" hoy dicen:\r\n "One Title" en http://www.example.com')
     })
   })
 })

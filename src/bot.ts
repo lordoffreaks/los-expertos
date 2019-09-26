@@ -14,7 +14,7 @@ export const replyFormatter = (
   tweet: Twit.Twitter.Status,
   result: SearchResult
 ) => {
-  return `Hola @${tweet.user.screen_name}! "Los Expertos" hoy dicen:\r\n ${result.title} en ${result.url}`
+  return `Hola @${tweet.user.screen_name}! "Los Expertos" hoy dicen:\r\n "${result.title}" en ${result.url}`
 }
 
 export const getRandomResult = (results: Array<SearchResult>) => {
