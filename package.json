@@ -15,14 +15,12 @@
   "license": "ISC",
   "dependencies": {
     "convict": "^5.1.0",
-    "throng": "^4.0.0",
     "twit": "^2.2.11"
   },
   "devDependencies": {
     "@types/convict": "^4.2.1",
     "@types/jest": "^24.0.18",
     "@types/node": "^12.7.8",
-    "@types/throng": "^4.0.2",
     "@types/twit": "^2.2.22",
     "jest": "^24.9.0",
     "ts-jest": "^24.1.0",
