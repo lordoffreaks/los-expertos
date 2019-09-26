@@ -1,5 +1,6 @@
 import Twit from 'twit'
 import { BotConfig } from './config'
+import winston from 'winston'
 
 export interface SearchResult {
   url: string
@@ -23,7 +24,7 @@ export const getRandomResult = (results: Array<SearchResult>) => {
 
 export const createBot = (
   config: BotConfig,
-  logger: any,
+  logger: winston.Logger,
   results: Array<SearchResult>
 ): Bot => {
   const authConfig = config.get('twitter')
