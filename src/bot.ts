@@ -30,6 +30,8 @@ export const createBot = (
   const T = new Twit(authConfig)
 
   const onTweet = async (tweet: Twit.Twitter.Status) => {
+    logger.info('Received tweet', tweet)
+
     // What is the text?
     // const txt = tweet.text;
     // the status update or tweet ID in which we will reply
