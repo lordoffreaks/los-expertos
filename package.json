@@ -8,7 +8,7 @@
     "prebuild": "rm -rf ./dist",
     "build": "echo 1",
     "start": "node dist/main.js",
-    "test": "jest --detectOpenHandles --forceExit"
+    "test": "jest --detectOpenHandles --forceExit --runInBand"
   },
   "keywords": [],
   "author": "",

@@ -37,5 +37,3 @@ jobs:
         CI: true
         MONGO_HOST: mongo
         MONGODB_URI: mongodb://root:example@mongo:${{ job.services.mongo.ports[27017] }}/heroku_dtzf4dns?authSource=admin
-        # MONGO_PORT: ${{ job.services.mongo.ports[27017] }}
-
