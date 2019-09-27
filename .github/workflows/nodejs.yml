@@ -22,6 +22,11 @@ jobs:
         env:
           MONGO_INITDB_ROOT_USERNAME: root
           MONGO_INITDB_ROOT_PASSWORD: example
+      
+      wait-mongo:
+        image: waisbrot/wait
+        env:
+          TARGETS: mongo:${{ job.services.mongo.ports[27017] }}
 
     steps:
     - uses: actions/checkout@v1
