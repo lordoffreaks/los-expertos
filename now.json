@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "env": {
+        "MONGODB_URI": "@mongodb_uri",
+        "TRAWLINGWEB_WEB_KEY": "@trawlingweb_web_key",
+        "BING_SEARCH_NEWS_KEY": "@bing_search_news_key",
+        "TIMBER_API_KEY": "@timber_api_key",
+        "TIMBER_SOURCE_ID": "@timber_source_id"
+    }
+}

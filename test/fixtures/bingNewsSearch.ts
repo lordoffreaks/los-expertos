@@ -63,36 +63,6 @@ const fixture = () => {
     },
     {
         "_type": "NewsArticle",
-        "name": "En México, no hay lugar como el hogar: la mayoría ya no quiere ir al norte a trabajar",
-        "url": "https://www.fltimes.com/news/nation/en-m-xico-no-hay-lugar-como-el-hogar-la/article_7ffb3db7-94cf-5fba-b384-5d7e10e397d1.html",
-        "image": {
-            "_type": "ImageObject",
-            "thumbnail": {
-                "_type": "ImageObject",
-                "contentUrl": "https://www.bing.com/th?id=ON.120B500AA11D8442DC79FBAA5EE043A8&pid=News",
-                "width": 700,
-                "height": 525
-            }
-        },
-        "description": "UU., particularmente en el norte de Texas, afirman expertos y economistas. \"Para muchas familias, la idea es que sus hijos e hijas jóvenes no sigan los pasos de sus tíos mayores, primos, abuelos que se han convertido en obreros permanentes\", destacó ...",
-        "provider": [
-            {
-                "_type": "Organization",
-                "name": "Finger Lakes Times",
-                "image": {
-                    "_type": "ImageObject",
-                    "thumbnail": {
-                        "_type": "ImageObject",
-                        "contentUrl": "https://www.bing.com/th?id=AR_f29d168b17fb8714584a1302402e78e4&pid=news"
-                    }
-                }
-            }
-        ],
-        "datePublished": "2019-09-11T06:10:00.0000000Z",
-        "category": "ScienceAndTechnology"
-    },
-    {
-        "_type": "NewsArticle",
         "name": "Cantante dice Plácido Domingo la acosó y le tocó los senos",
         "url": "https://www.kron4.com/noticias/cantante-dice-placido-domingo-la-acoso-y-le-toco-los-senos/",
         "image": {
@@ -119,6 +89,36 @@ const fixture = () => {
             }
         ],
         "datePublished": "2019-09-06T00:00:00.0000000Z",
+        "category": "ScienceAndTechnology"
+    },
+    {
+        "_type": "NewsArticle",
+        "name": "En México, no hay lugar como el hogar: la mayoría ya no quiere ir al norte a trabajar",
+        "url": "https://www.fltimes.com/news/nation/en-m-xico-no-hay-lugar-como-el-hogar-la/article_7ffb3db7-94cf-5fba-b384-5d7e10e397d1.html",
+        "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+                "_type": "ImageObject",
+                "contentUrl": "https://www.bing.com/th?id=ON.120B500AA11D8442DC79FBAA5EE043A8&pid=News",
+                "width": 700,
+                "height": 525
+            }
+        },
+        "description": "UU., particularmente en el norte de Texas, afirman expertos y economistas. \\\"Para muchas familias, la idea es que sus hijos e hijas jóvenes no sigan los pasos de sus tíos mayores, primos, abuelos que se han convertido en obreros permanentes\\\", destacó ...",
+        "provider": [
+            {
+                "_type": "Organization",
+                "name": "Finger Lakes Times",
+                "image": {
+                    "_type": "ImageObject",
+                    "thumbnail": {
+                        "_type": "ImageObject",
+                        "contentUrl": "https://www.bing.com/th?id=AR_f29d168b17fb8714584a1302402e78e4&pid=news"
+                    }
+                }
+            }
+        ],
+        "datePublished": "2019-09-11T06:10:00.0000000Z",
         "category": "ScienceAndTechnology"
     }
 ]

@@ -3,14 +3,13 @@ const path = require('path')
 module.exports = {
   mode: 'production',
   entry: './src/index.ts',
-  // devtool: 'source-map',
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx']
   },
   output: {
     libraryTarget: 'commonjs',
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
+    path: path.resolve(__dirname, 'api'),
+    filename: 'index.js'
   },
   target: 'node',
   module: {

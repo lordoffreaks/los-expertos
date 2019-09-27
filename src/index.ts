@@ -1,5 +1,5 @@
 import config from './config'
-import { createBot } from './bot'
+import { createBot } from './config'
 import results from '../news.json'
 import { createLogger } from './logger'
 

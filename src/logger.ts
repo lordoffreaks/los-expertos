@@ -1,9 +1,11 @@
 import winston from 'winston'
 import { Timber } from '@timberio/node'
 import { TimberTransport } from '@timberio/winston'
-import { BotConfig } from './config'
+import { AppConfig } from './config'
 
-export const createLogger = (config: BotConfig) => {
+export type AppLogger = winston.Logger
+
+export const createLogger = (config: AppConfig) => {
   // Create a Timber client
   const timberCredentials = config.get('timber')
 
@@ -26,7 +28,7 @@ export const createLogger = (config: BotConfig) => {
     ]
   })
 
-  if (extraTransports.length > 0) {
+  if (extraTransports.length > 1) {
     logger.info('Timber transport added!')
   }
 

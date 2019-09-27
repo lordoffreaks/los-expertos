@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    ports: 
+      - 27017:27017
+
+  wait-mongo:
+    image: waisbrot/wait
+    environment:
+      - TARGETS=mongo:27017
+
+  tests:
+    image: los-expertos
+    build: .
+    environment: 
+      MONGODB_URI: mongodb://root:example@mongo:27017/heroku_dtzf4dns?authSource=admin
+    command: npm run test

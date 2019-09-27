@@ -9,12 +9,8 @@
     "target": "es2016",
     "outDir": "dist",
     "module": "commonjs",
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "strict": true,
+    "sourceMap": true,
     "esModuleInterop": true,
     "resolveJsonModule": true
   }
