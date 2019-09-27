@@ -12,7 +12,7 @@ export const createTrawlingwebService = (
   const search = async (term: string): Promise<Array<SearchResult>> => {
     const { data } = await client.search(term)
     return Promise.all(
-      data.filter(transformer.filter).map(transformer.transform)
+      data.filter(transformer.filter).map(r => transformer.transform(r, term))
     )
   }
 

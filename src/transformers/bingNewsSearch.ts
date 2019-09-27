@@ -7,10 +7,15 @@ export const createBingNewsSearchTransformer = (
   _: AppConfig,
   __: AppLogger
 ): Transformer => {
-  const transform = async ({ url, name, _type }: NewsArticle) => {
+  const transform = async (
+    { url, name, description, _type }: NewsArticle,
+    term: string
+  ) => {
+    const title = name && name.indexOf(term) !== -1 ? name : description
+
     return {
       url: url || _type,
-      title: name || _type
+      title: title || _type
     }
   }
 

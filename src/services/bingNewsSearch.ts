@@ -1,8 +1,12 @@
 import { CognitiveServicesCredentials } from 'ms-rest-azure'
 import NewsSearchAPIClient from 'azure-cognitiveservices-newssearch'
 import { AppConfig } from '../config'
-import { Transformer } from '../models'
+import { Transformer, SearchResult } from '../models'
 import { AppLogger } from '../logger'
+
+export type BingNewsSearchService = {
+  search: (term: string) => Promise<Array<SearchResult>>
+}
 
 export const createBingNewsSearchService = (
   config: AppConfig,
@@ -30,9 +34,9 @@ export const createBingNewsSearchService = (
       count: 100
     } as SearchOptions
     const result = await client.newsOperations.search(term, options)
-    return Promise.all(
-      result.value.filter(transformer.filter).map(transformer.transform)
-    )
+  
+    const transformed = await Promise.all(result.value.filter(transformer.filter).map(r => transformer.transform(r, term)))
+    return transformed
   }
 
   return { search }

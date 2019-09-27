@@ -8,7 +8,7 @@ export interface SearchService {
 }
 
 export interface Transformer {
-  transform: (result: any) => Promise<SearchResult>
+  transform: (result: any, term: string) => Promise<SearchResult>
   filter: (result: any) => boolean
 }
 

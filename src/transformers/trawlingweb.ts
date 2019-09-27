@@ -22,7 +22,7 @@ export const createTrawlingwebTransformer = (
     return href
   }
 
-  const transform = async ({ url, title }: TrawlingwebResult) => {
+  const transform = async ({ url, title }: TrawlingwebResult, _: string) => {
     return {
       url: await parseUrl(url),
       title

@@ -41,7 +41,7 @@ describe('transformer', () => {
       .reply(200, html)
     const results = fixture()
     const result = JSON.parse(results)[0]
-    expect(await transformer.transform(result)).toEqual({
+    expect(await transformer.transform(result, 'Los Expertos')).toEqual({
       url: 'http://www.diariodelaltoaragon.es/NoticiasDetalle.aspx?Id=1180478',
       title:
         'Los expertos apuntan que las diferencias de género pueden influir en la mayor mortalidad de mujeres'
