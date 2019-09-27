@@ -39,7 +39,7 @@ function getConfig(): AppConfig {
       doc: 'Endpoint to bring the results from.',
       format: String,
       env: 'DATE_ENDPOINT',
-      default: 'https://the-experts-bot.lordoffreaks.now.sh/api/date'
+      default: 'https://the-experts-bot.lordoffreaks.now.sh'
     },
     timber: {
       api_key: {

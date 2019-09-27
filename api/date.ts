@@ -14,7 +14,9 @@ export default async (req: NowRequest, res: NowResponse) => {
       date = new Date(req.query.date.toString())
     }
 
-    const results = await storageService.findByDate(date)
+    const formattedDate = new Date(date.toISOString().slice(0, 10))
+    const results = await storageService.findByDate(formattedDate)
+    
     res.json(results)
   } catch (err) {
     logger.error('Error', err)

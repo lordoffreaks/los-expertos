@@ -15,10 +15,12 @@ APP_ACCESS_TOKEN=xxx
 APP_ACCESS_TOKEN_SECRET=xxx
 ```
 
-## TODO
+## TODO
 
-- [ ] Add date in mongo db
-- [ ] Endpoint to collect by date
+- [x] Add date in mongo db
+- [x] Endpoint to collect by date
+- [ ] Start bot collecing data from the endpoint
+
 
 ## References
 
