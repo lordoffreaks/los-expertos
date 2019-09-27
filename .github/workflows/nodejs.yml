@@ -26,7 +26,7 @@ jobs:
       wait-mongo:
         image: waisbrot/wait
         env:
-          TARGETS: mongo:${{ job.services.mongo.ports[27017] }}
+          TARGETS: mongo:27017
 
     steps:
     - uses: actions/checkout@v1
