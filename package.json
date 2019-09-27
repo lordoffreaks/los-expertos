@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "source .env.sh && TS_NODE_PROJECT=./tsconfig.json ts-node ./src/index.ts",
     "prebuild": "rm -rf ./dist",
-    "build": "echo 1",
-    "start": "node dist/main.js",
+    "build": "webpack --config webpack.config.js",
+    "start": "node dist/index.js",
     "test": "jest --detectOpenHandles --forceExit --runInBand"
   },
   "keywords": [],

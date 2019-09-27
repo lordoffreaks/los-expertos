@@ -8,7 +8,7 @@ module.exports = {
   },
   output: {
     libraryTarget: 'commonjs',
-    path: path.resolve(__dirname, 'api'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'index.js'
   },
   target: 'node',
