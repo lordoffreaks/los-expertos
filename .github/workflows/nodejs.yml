@@ -19,6 +19,9 @@ jobs:
         image: mongo
         ports:
         - 27017:27017
+      env:
+        MONGO_INITDB_ROOT_USERNAME: root
+        MONGO_INITDB_ROOT_PASSWORD: example
 
     steps:
     - uses: actions/checkout@v1
@@ -26,15 +29,13 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
+    - name: npm install and test
       run: |
         npm ci
-        npm run build --if-present
         npm test
       env:
         CI: true
         MONGO_HOST: mongo
-        MONGO_INITDB_ROOT_USERNAME: root
-        MONGO_INITDB_ROOT_PASSWORD: example
-        MONGO_PORT: ${{ job.services.mongon.ports[27017] }}
+        MONGODB_URI: mongodb://root:example@mongo:${{ job.services.mongo.ports[27017] }}/heroku_dtzf4dns?authSource=admin
+        # MONGO_PORT: ${{ job.services.mongo.ports[27017] }}
 
