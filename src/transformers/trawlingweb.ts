@@ -4,6 +4,9 @@ import { AppConfig } from '../config'
 import { Transformer } from '../models'
 import { TrawlingwebResult } from '../clients/trawlingwebClient'
 import { AppLogger } from '../logger'
+import axiosRetry from 'axios-retry'
+
+axiosRetry(axios, { retries: 3 })
 
 export const createTrawlingwebTransformer = (
   _: AppConfig,

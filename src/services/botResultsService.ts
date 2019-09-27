@@ -1,6 +1,9 @@
 import axios from 'axios'
 import { AppConfig } from '../config'
 import { SearchResult } from '../models'
+import axiosRetry from 'axios-retry'
+
+axiosRetry(axios, { retries: 3 })
 
 export type BotResultsService = {
   fetch: (date?: Date) => Promise<Array<SearchResult>>
