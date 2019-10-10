@@ -42,7 +42,7 @@
     "@types/node": "10",
     "@types/saslprep": "^1.0.0",
     "@types/throng": "^4.0.2",
-    "@types/twit": "^2.2.22",
+    "@types/twit": "^2.2.23",
     "@types/winston": "^2.4.4",
     "jest": "^24.9.0",
     "mockdate": "^2.0.5",
