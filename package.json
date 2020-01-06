@@ -39,7 +39,7 @@
     "@types/mongoose": "^5.5.31",
     "@types/morgan": "^1.7.37",
     "@types/nock": "^11.1.0",
-    "@types/node": "10",
+    "@types/node": "13",
     "@types/saslprep": "^1.0.0",
     "@types/throng": "^4.0.2",
     "@types/twit": "^2.2.23",
