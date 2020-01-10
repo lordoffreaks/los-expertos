@@ -36,7 +36,7 @@
     "@types/express": "^4.17.1",
     "@types/jest": "^24.0.23",
     "@types/mockdate": "^2.0.0",
-    "@types/mongoose": "^5.5.31",
+    "@types/mongoose": "^5.5.41",
     "@types/morgan": "^1.7.37",
     "@types/nock": "^11.1.0",
     "@types/node": "10",
