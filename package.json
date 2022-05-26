@@ -22,7 +22,7 @@
     "azure-cognitiveservices-newssearch": "^2.0.0",
     "cheerio": "^1.0.0-rc.3",
     "mongoose": "^5.7.11",
-    "convict": "^5.2.0",
+    "convict": "^6.2.3",
     "ms-rest-azure": "^3.0.0",
     "saslprep": "^1.0.3",
     "twit": "^2.2.11",
